@@ -53,6 +53,7 @@ function generatePassword() {
     }
     else {
         alert("Invalid password length. Enter a number between 8 and 128, please and thank you!:)");
+        return
     }
 
 

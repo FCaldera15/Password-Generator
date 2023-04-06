@@ -8,7 +8,9 @@ let uppercaseAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 
 let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '?', '+'];
 let builtArray = []
-let generatedLetterIndex = Math.floor(Math.random() * builtArray.length);
+let finalPassword = []
+
+
 function generatePassword() {
 
     if (confirm("Do you want your password to contain lowercase letters?")) {
@@ -42,6 +44,8 @@ function generatePassword() {
 
     }
 
+    console.log(builtArray)
+
 
     let length = prompt("How long do you want the password? (must be between 8 and 128 characters)");
 
@@ -52,9 +56,14 @@ function generatePassword() {
         alert("Invalid password length. Enter a number between 8 and 128, please and thank you!:)");
     }
 
-    // builtArray = [generatedLetterIndex];
-    return password = builtArray[generatedLetterIndex];
+    for (let i = 0; i < length; i++) {
+        finalPassword.push(builtArray[Math.floor(Math.random() * builtArray.length)])
+
+    }
+    console.log(finalPassword)
+    return finalPassword.join("")
 }
+
 
 function writePassword() {
     let password = generatePassword();
